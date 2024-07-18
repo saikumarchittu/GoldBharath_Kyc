@@ -1,7 +1,5 @@
 package Performing_Kyc;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import ObjectRepository.GoldBharath_After_Login;
 import ObjectRepository.LLP_Kyc_Page;
@@ -13,9 +11,13 @@ import genericUtility.WebDriverUtility;
 public class LLP_KYC extends BaseClass_GoldBharath{
 
 	@Test
-	public void kycTest() throws Exception {
+	public void kycTest() throws Exception 
+	{
+		
 		GoldBharath_After_Login gal=new GoldBharath_After_Login(driver);
+		
 		WebDriverUtility wu=new WebDriverUtility();
+		
 		ExcelFileUtility eu=new ExcelFileUtility();
 		
 		String Dname=eu.readDataFromExcel("LLP_KYC", 4, 1);
@@ -53,12 +55,17 @@ public class LLP_KYC extends BaseClass_GoldBharath{
 		gal.getProfileBtn().click();
 		
 		Thread.sleep(2000);
+		
 		ProfilePage pp=new ProfilePage(driver);
+		
 		pp.getKycLnk().click();
 		
 		LLP_Kyc_Page lkp=new LLP_Kyc_Page(driver);
 		
+		Thread.sleep(2000);
+		
 		lkp.getLlpLnk().click();
+
 		Thread.sleep(2000);
 		
 		lkp.getDirectorNameEdt().sendKeys(Dname);
@@ -117,5 +124,7 @@ public class LLP_KYC extends BaseClass_GoldBharath{
 		wu.takeScreenShot(driver, "KYC Created PopUp");
 		
 		Thread.sleep(3000);
+		
+		
 	}
 }

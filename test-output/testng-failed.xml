@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Performing_Kyc.Pvt_Ltd_Kyc">
+      <class name="Performing_Kyc.Register">
         <methods>
           <include name="bcConfig"/>
-          <include name="KycPage"/>
           <include name="amConfig"/>
           <include name="bsConfig"/>
           <include name="asConfig"/>
           <include name="acConfig"/>
           <include name="bmConfig"/>
+          <include name="register_user"/>
         </methods>
-      </class> <!-- Performing_Kyc.Pvt_Ltd_Kyc -->
+      </class> <!-- Performing_Kyc.Register -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

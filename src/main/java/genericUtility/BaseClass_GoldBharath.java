@@ -100,12 +100,11 @@ public class BaseClass_GoldBharath {
 		    Thread.sleep(2000);
 		    driver.findElement(By.xpath("//button[.='Login']")).click();
 		    
-		    Thread.sleep(2000);
+    	    Thread.sleep(2000);
 		    //driver.findElement(By.xpath("//p[.='Log In']/following-sibling::div/input[@placeholder='Enter Mobile Number']")).sendKeys(MOBILENUMBER , Keys.ENTER);
 	        driver.findElement(By.xpath("//input[@placeholder=' Enter Your Number']")).sendKeys(MOBILENUMBER , Keys.ENTER);
 		    Thread.sleep(2000);//input[@id='otp_0_ri9ujmc6dkhlxbp4h6p']
 		    driver.findElement(By.xpath("(//input[@autocomplete='one-time-code'])[1]")).sendKeys(OTP);
-		    
 		    Thread.sleep(6000);
 			System.out.println("---Login successfully---");
 		}
